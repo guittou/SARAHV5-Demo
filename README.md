@@ -40,7 +40,7 @@ Ce mode d'installation est un mode "facile" afin de la simplifier, normalement i
 - Pour n'avoir que le mot déclencheur, supprimez les fichiers XML de grammaires de test fournis avec l'application.
 	- Allez dans le répertoire SARAHV5\viseo-bot-project\data\grammar
 	- Déplacez les fichiers "meteo.xml" et "time.xml" dans un répertoire temporaire (par exemple sur votre bureau).
-
+- Ouvrez le fichier SARAHV5\viseo-bot-project\data\grammar\wildcard.xml (le seul qui reste) et changez "wesh gros" par "SARAH"
 
 
 ## Création du flow démo
