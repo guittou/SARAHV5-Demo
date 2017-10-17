@@ -29,7 +29,7 @@ Ce mode d'installation est un mode "facile" afin de la simplifier, normalement i
 ```text
 "node-red": {
     "nodes": {
-	  "win-sysvolume": "win-sysvolume/node-sysvolume.js",
+      "win-sysvolume": "win-sysvolume/node-sysvolume.js",
       "win-speak": "win-speak/node-speak.js",
       "win-listen-config": "win-listen/node-listen-config.js",
       "win-sarah": "win-listen/node-sarah.js"

@@ -1,0 +1,39 @@
+<script type="text/javascript">
+    RED.nodes.registerType('win-sysvolume',{
+        category: 'SARAH',
+        color: '#3FADB5',
+        defaults: { 
+            name:      { value: undefined },
+			state:     { value: "1" },
+			microphone: { value: "default_record" },
+        },
+        inputs:1,
+        outputs:1,
+        icon: "sysvolume.svg",
+        align: "left",
+        paletteLabel: "SysVolume",
+        label: function() { return this.name || "SysVolume"; },
+    });
+</script>
+
+<script type="text/x-red" data-template-name="win-sysvolume">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+	<div class="form-row">
+        <label for="node-input-state"><i class="icon-tag"></i> State</label>
+        <input type="text" id="node-input-state" placeholder="t">
+    </div>
+	<div class="form-row">
+        <label for="node-input-microphone"><i class="icon-tag"></i> Microphone</label>
+        <input type="text" id="node-input-microphone" placeholder="default_record">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="win-sysvolume">
+    <p>Mute/unmute the system volume</p>
+	<p>state 0: unmute</p>
+	<p>state 1: mute</p>
+	<p>microphone:  microphone name</p>
+</script>
