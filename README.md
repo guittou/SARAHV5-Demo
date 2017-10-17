@@ -1,7 +1,7 @@
 Petite démo Sarah V5
 ====================
 
-![GitHub Logo](/logo/flow.jpg)
+![GitHub Logo](/logo/flow.png)
 
 Cette démonstration est un test du Garbage sans règles de grammaires XML. Le buffer est envoyé à Google Speech API.
 
