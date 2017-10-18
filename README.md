@@ -46,7 +46,7 @@ Ce mode d'installation est un mode "facile" afin de la simplifier, normalement i
 ## Correction de la brique Google API
 Une petite erreur s'est glissée dans le javascript de la fonction qui fait planter le flow si rien n'est retourné de L'API Google.
 
-Pour la corriger (avant que l'équipe de développement Node-Red ne le fasse), procédez comme suit:
+Pour la corriger (avant que l'équipe de développement Viseo ne le fasse), procédez comme suit:
 
 - Copiez le fichier google-speech\google-speech-text.js dans le répertoire SARAHV5\viseo-bot-framework\node_modules\node-red-contrib-viseo-google-speech
 
