@@ -45,10 +45,12 @@ Ce mode d'installation est un mode "facile" afin de la simplifier, normalement i
 
 ## Correction de la brique Google API
 Une petite erreur s'est glissée dans le javascript de la fonction qui fait planter le flow si rien n'est retourné de L'API Google.
+
 Pour la corriger (avant que l'équipe de développement Node-Red ne le fasse), procédez comme suit:
 
 - Copiez le fichier google-speech\google-speech-text.js dans le répertoire SARAHV5\viseo-bot-framework\node_modules\node-red-contrib-viseo-google-speech
-** Note: Vous pouvez sauvegarder la précedente version avant de la remplacer.
+
+**Note**: Vous pouvez sauvegarder la précedente version du fichier avant de la remplacer.
 
 
 ## Création du flow démo
@@ -126,14 +128,4 @@ Pour la corriger (avant que l'équipe de développement Node-Red ne le fasse), p
 		- state: 0
 		- microphone: default_record
 	
-	
-## A faire...
-Il peut arriver que la brique Google API crée une exception qui fait planter le flow et donc que le microphone qui normalement est réactivé à la fin de l'action reste en mode mute. Il faut trapper l'exception de la brique Google API pour remettre le microphone dans tous les cas.
-
-Pour l'instant:
-- Vous pouvez aller dans le panneau de configuration du son et cliquez sur le mute/unmute du microphone manuellement si ca vous arrive.
-- Ou trouver comment trapper les exceptions des briques node-red et la gérer... :-D
-
-
-
  
