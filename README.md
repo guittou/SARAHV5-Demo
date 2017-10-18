@@ -43,6 +43,14 @@ Ce mode d'installation est un mode "facile" afin de la simplifier, normalement i
 - Ouvrez le fichier SARAHV5\viseo-bot-project\data\grammar\wildcard.xml (le seul qui reste) et changez "wesh gros" par "SARAH"
 
 
+## Correction de la brique Google API
+Une petite erreur s'est glissée dans le javascript de la fonction qui fait planter le flow si rien n'est retourné de L'API Google.
+Pour la corriger (avant que l'équipe de développement Node-Red ne le fasse), procédez comme suit:
+
+- Copiez le fichier google-speech\google-speech-text.js dans le répertoire SARAHV5\viseo-bot-framework\node_modules\node-red-contrib-viseo-google-speech
+** Note: Vous pouvez sauvegarder la précedente version avant de la remplacer.
+
+
 ## Création du flow démo
 
 - Brique switch
@@ -58,6 +66,18 @@ Ce mode d'installation est un mode "facile" afin de la simplifier, normalement i
 		- Configurer votre Google API Key dans crédentials
 		- Input: msg.payload.buffer
 		- Output: msg.payload
+- brique switch
+	- test si la transcription est correcte
+		- Property: msg.payload.transcript
+		- Ajoutez test 1 pour tester si la transcription n'est pas correcte
+			- is null
+		- Ajoutez test 2 pour tester si la transcription est correcte
+			- otherwize
+- Brique Fonction "transcrition error"
+	- La transcription Google est nulle (cablée à la brique speak mais ca peut vite devenir agaçant donc vous pouvez très bien cabler le test 1 de la brique switch sur la brique SysVolume directement)
+		- Fonction:
+			- msg.payload = "Je n'ai pas compris";
+			- return msg;
 - Brique ToLowerCase
 	- Pas vraiment utile mais sert à mettre le texte en minuscule pour le switch
 	- Fonction:
