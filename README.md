@@ -68,8 +68,8 @@ Pour la corriger (avant que l'équipe de développement Node-Red ne le fasse), p
 		- Configurer votre Google API Key dans crédentials
 		- Input: msg.payload.buffer
 		- Output: msg.payload
-- brique switch
-	- test si la transcription est correcte
+- Brique switch
+	- Test si la transcription est correcte
 		- Property: msg.payload.transcript
 		- Ajoutez test 1 pour tester si la transcription n'est pas correcte
 			- is null
