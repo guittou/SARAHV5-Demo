@@ -76,7 +76,7 @@ Pour la corriger (avant que l'équipe de développement Node-Red ne le fasse), p
 		- Ajoutez test 2 pour tester si la transcription est correcte
 			- otherwize
 - Brique Fonction "transcrition error"
-	- La transcription Google est nulle (cablée à la brique speak mais ca peut vite devenir agaçant donc vous pouvez très bien cabler le test 1 de la brique switch sur la brique SysVolume directement)
+	- La transcription Google est nulle (cablée à la brique speak mais le message peut vite devenir agaçant donc vous pouvez très bien cabler le test 1 de la brique switch sur la brique SysVolume directement)
 		- Fonction:
 			- msg.payload = "Je n'ai pas compris";
 			- return msg;
